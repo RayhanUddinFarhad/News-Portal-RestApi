@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+
+
+    <nav>
+
+
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img
+                                src="images/attractive-stylish-woman-leather-jacket-smiling-removebg-preview 1 (1).png" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="my-10">
+
+
+        <section class="lg:flex justify-around my-10" id="cat-container">
+
+
+
+
+        </section>
+
+        <section>
+
+            <div class="alert shadow-lg">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        class="stroke-info flex-shrink-0 w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span><span id="item-count">4</span> items found for category <span
+                            id="cat-name">Entertainment</span></span>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="news-container" class="p-5 space-y-10">
+
+
+            
+            </div>
+
+
+
+
+
+
+        </section>
+
+        <div id="modal-container ">
+
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <div class="modal">
+                <div class="modal-box relative">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 id="modal-title" class="text-lg font-bold">Congratulations random Internet user!</h3>
+
+                    <div id="modal-image">
+
+
+                    </div>
+                    <p id="modal-des" class="py-4">You've been selected for a chance to get one year of subscription to
+                        use Wikipedia for free!</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+
+    <script src="js/index.js"></script>
+
+
+</body>
+
+
+
+
+
+
+</html>
