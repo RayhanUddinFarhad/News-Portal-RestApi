@@ -18,8 +18,9 @@
 
 
         <div class="navbar bg-base-100">
-            <div class="flex-1">
-                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+            <div class="flex-1 space-x-2">
+                <button  class="btn btn-primary">News</button>
+                <button  class="btn btn-outline btn-primary">Portal</button>
             </div>
             <div class="flex-none gap-2">
                 <div class="form-control">
@@ -52,6 +53,37 @@
 
 
         <section class="lg:flex justify-around my-10" id="cat-container">
+
+
+
+
+        </section>
+
+
+        <section class="lg:flex justify-between p-5">
+
+            <div class="m-5">
+
+                <select class="select select-primary w-full max-w-xs">
+                    <option disabled selected>Default</option>
+                    <option>Game of Thrones</option>
+                    <option>Lost</option>
+                    <option>Breaking Bad</option>
+                    <option>Walking Dead</option>
+                  </select>
+
+
+            </div>
+
+
+            <div >
+
+                <button onclick="TodayPload()" class="btn btn-primary">Today's pick</button>
+                <button onclick="loadTrending()" class="btn btn-outline btn-primary">Trending</button>
+
+
+
+            </div>
 
 
 

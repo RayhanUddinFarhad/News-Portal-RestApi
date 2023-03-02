@@ -1,3 +1,7 @@
+
+let fetchData = []
+let fetchTodaysPick = []
+
 const loadCategory = async (category) => {
 
 
@@ -19,7 +23,7 @@ const showCategory = (cats) => {
         catContainer.innerHTML += `
 
 
-        <p onclick="loadNews('${category.category_id}', '${category.category_name}')">${category.category_name}</p>
+        <p class  = "cursor-pointer focus:ring-violet-300" onclick="loadNews('${category.category_id}', '${category.category_name}')">${category.category_name}</p>
 
         
         
@@ -43,6 +47,8 @@ const loadNews = async (id, category_name) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     const res = await fetch(url)
     const data = await res.json()
+    fetchData = (data.data)
+    fetchTodaysPick = (data.data)
     showNews(data.data, category_name)
 
 
@@ -63,7 +69,10 @@ const showNews = (news, category_name) => {
     document.getElementById('cat-name').innerText = category_name;
 
 
+
     news.forEach(newsItem => {
+
+        const date = new Date(newsItem.author.published_date);
 
         newsCotainer.innerHTML += `
 
@@ -81,7 +90,7 @@ const showNews = (news, category_name) => {
                 <div>
 
                     <p>${newsItem.author.name}</p>
-                    <p>${newsItem.author.published_date.slice(0, 10)}</p>
+                    <p>${date.getDate()} ${date.toLocaleString('default', { month: 'long' })}, ${date.getFullYear()}</p>
                 </div>
 
                 
@@ -186,6 +195,25 @@ const showDetails = (getDetails) => {
 
 
 }
+
+const loadTrending = (data) => {
+const filter = fetchData.filter (data => data.others_info.is_trending === true)
+const name = document.getElementById('cat-name').innerText;
+
+showNews (filter, name)
+
+
+
+ }
+
+ const TodayPload = (data) => { 
+    const filter = fetchTodaysPick.filter(data => data.others_info.is_todays_pick === true)
+    const name = document.getElementById('cat-name').innerText;
+
+    showNews (filter, name)
+
+
+ }
 
 
 
